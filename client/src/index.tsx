@@ -4,12 +4,15 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import reportWebVitals from './reportWebVitals';
 
-import './index.css';
+import { ConfigProvider, theme } from 'antd'
+
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Paths } from './paths';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
+
+import './index.css';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -21,17 +24,20 @@ const router = createBrowserRouter([
   },
   {
     path: Paths.login,
-    element: <Login/>
+    element: <Login />
   },
   {
     path: Paths.register,
-    element: <Register/>
+    element: <Register />
   },
 ])
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <ConfigProvider theme={{
+        algorithm: theme.darkAlgorithm
+      }}></ConfigProvider>
       <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
