@@ -14,6 +14,7 @@ import { Register } from './pages/register';
 
 import './index.css';
 import { Auth } from './features/auth/auth';
+import { Employees } from './pages/employees';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -21,7 +22,7 @@ const root = createRoot(container);
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h2>Employees</h2>
+    element: <Employees />
   },
   {
     path: Paths.login,
