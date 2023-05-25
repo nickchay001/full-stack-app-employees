@@ -1,7 +1,5 @@
 import { User } from "@prisma/client";
 import { api } from './api'
-import { query } from "express";
-import { Register } from "../../pages/register";
 
 export type UserData = Omit<User, "id">
 

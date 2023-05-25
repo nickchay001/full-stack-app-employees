@@ -13,6 +13,7 @@ import { Login } from './pages/login';
 import { Register } from './pages/register';
 
 import './index.css';
+import { Auth } from './features/auth/auth';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -38,7 +39,9 @@ root.render(
       <ConfigProvider theme={{
         algorithm: theme.darkAlgorithm
       }}></ConfigProvider>
-      <RouterProvider router={router} />
+      <Auth>
+        <RouterProvider router={router} />
+      </Auth>
     </Provider>
   </React.StrictMode>
 );
