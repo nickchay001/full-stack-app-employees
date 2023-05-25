@@ -41,9 +41,11 @@ export const Employees = () => {
     }
   }, [user, navigate])
 
+  const goToAddUser=() => navigate(Paths.employeeAdd)
+
   return (
     <Layout>
-      <CustomeButton type='primary' onClick={() => null} icon={<PlusCircleOutlined />}>
+      <CustomeButton type='primary' onClick={goToAddUser} icon={<PlusCircleOutlined />}>
         Добавить
       </CustomeButton>
       <Table
