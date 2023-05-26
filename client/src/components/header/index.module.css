@@ -4,12 +4,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    color: #ffff;
 }
 
-.header * {
-    color: #ffff;
-}
 
 .teamIcon {
     font-size: 26px;
